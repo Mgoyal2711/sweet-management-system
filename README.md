@@ -57,8 +57,11 @@ Sweet-Shop-Management-System
 ## 🔧 Backend Setup
 
 git clone https://github.com/Mgoyal2711/Sweet-management-system
+
 cd Sweet-management-system/Backend
+
 npm install
+
 npm run dev
 
 Server runs at: http://localhost:3000
