@@ -1,161 +1,126 @@
-[[[🍬 Sweet Store Management System
+# 🍬 Sweet Shop Management System
 
-A full-stack Sweet Store Management application designed to handle inventory operations such as adding, purchasing, searching, and restocking sweets. The backend is built using TypeScript and Node.js, while the frontend uses vanilla JavaScript, HTML, and CSS for a lightweight and responsive experience.
+A comprehensive Sweet Shop Management System built using **TypeScript** for the backend and **vanilla JavaScript** for the frontend. This application allows complete management of sweet inventory with CRUD operations, search functionality, and full test coverage.
 
-✨ Key Highlights
-Clean separation of backend and frontend
-Fully tested business logic with complete coverage
-Simple UI for managing sweets inventory
-RESTful API design
-Beginner-friendly and easy to extend
-
-🚀 Functionalities
-Inventory Operations
-Add new sweets with name, category, price, and quantity
-Delete sweets from inventory
-Restock existing sweets
-Search & Filter
-Search sweets by exact name
-Filter sweets by category (case-insensitive)
-Filter sweets within a price range
-Sales
-Purchase sweets with automatic stock reduction
-View
-Display complete inventory at any time
-
-🗂️ Project Structure
-Sweet-Shop-Management-System/
+## ✨ Features
+- **Add Sweet** – Add new sweets with name, category, price, and quantity  
+- **Delete Sweet** – Remove sweets from inventory  
+- **Search by Name** – Find sweets using exact name  
+- **Search by Category** – Case-insensitive category filtering  
+- **Search by Price Range** – Filter sweets within a price range  
+- **Purchase Sweet** – Buy sweets with automatic stock reduction  
+- **Restock Sweet** – Increase stock quantity  
+- **View All Sweets** – Display complete inventory
+  
+## 🏗️ Project Structure
+Sweet-Shop-Management-System
 ├── README.md
 ├── Backend/
-│   ├── src/
-│   │   ├── app.ts                  # Core SweetShop business logic
-│   │   ├── server.ts               # Express server entry point
-│   │   ├── routes/
-│   │   │   └── sweetRoutes.ts      # API endpoints
-│   │   ├── types/
-│   │   │   └── Sweet.ts            # Sweet type definition
-│   │   ├── utils/
-│   │   │   └── IdGenerator.ts      # Unique ID generator
-│   │   └── tests/                  # Unit test cases
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── jest.config.js
-│   └── coverage/                   # Test coverage output
+│ ├── src/
+│ │ ├── app.ts # SweetShop business logic
+│ │ ├── server.ts # Express server setup
+│ │ ├── routes/
+│ │ │ └── sweetRoutes.ts # API routes
+│ │ ├── types/
+│ │ │ └── Sweet.ts # Sweet interface
+│ │ ├── utils/
+│ │ │ └── IdGenerator.ts # Unique ID generator
+│ │ └── tests/ # Unit test suite
+│ ├── package.json
+│ ├── tsconfig.json
+│ ├── jest.config.js
+│ └── coverage/ # Test coverage reports
 └── Frontend/
-    ├── index.html                  # UI layout
-    ├── script.js                   # Frontend logic
-    └── style.css                   # Styling
+├── index.html # UI
+├── script.js # Frontend logic
+└── style.css # Styling
 
-⚙️ Setup Instructions
-Prerequisites
-Node.js (v14+)
+### Prerequisites
+- Node.js (v14 or higher)
+- npm
 
-npm
-🔧 Backend Setup
-
-# Clone repository
-
-# Move to backend folder
-
-cd sweet-management-system
-# Install dependencies
+### 🔧 Backend Setup
+git clone https://github.com/Mgoyal2711/Sweet-management-system
+cd Sweet-management-system/Backend
 npm install
-
-# Start development server
 npm run dev
+📍 Server runs at: http://localhost:3000
 
-📍 Server runs on: http://localhost:3000
-
-🎨 Frontend Setup
-# Move to frontend folder
+###🎨 Frontend Setup
 cd Frontend
-
-Open index.html directly in browser
-
-OR use VS Code Live Server
-
+Open index.html in a browser
+OR use Live Server in VS Code
 Ensure backend is running on port 3000
 
-🧪 Testing & Coverage
+###🧪 Testing
 Run Tests
+cd Backend
 npm test
-
-Coverage Report
+Run Coverage
 npm run test:coverage
+Watch Mode
+npm run test:watch
 
-✔ 100% test coverage achieved
-
+###📊 Test Coverage Report
+✔ 100% Code Coverage Achieved
 Metric	Coverage
 Statements	100%
 Branches	100%
 Functions	100%
 Lines	100%
 
-Open detailed report:
-
+###Test files include:
+Add Sweet tests
+Delete Sweet tests
+Search (Name, Category, Price)
+Purchase tests
+Restock tests
+ID Generator tests
+View report:
 Backend/coverage/index.html
 
-🔗 API Endpoints
-Method	Endpoint	Purpose
-POST	/api/sweets/add	Add sweet
+###🌐 API Endpoints
+Method	Endpoint	Description
+POST	/api/sweets/add	Add a sweet
 DELETE	/api/sweets/delete	Delete sweet
 GET	/api/sweets/all	View all sweets
 POST	/api/sweets/search	Search by name
 POST	/api/sweets/category	Search by category
-POST	/api/sweets/price	Filter by price
+POST	/api/sweets/price	Search by price
 POST	/api/sweets/purchase	Purchase sweet
 POST	/api/sweets/restock	Restock sweet
-🖥️ Frontend Overview
 
-The UI is designed as a dashboard-style interface:
+###💻 Frontend Preview
+Main Interface
+Sweet Added
+UI Highlights
+Responsive design
+Real-time feedback
+Card-based dashboard
+Clean & intuitive UX
+Client-side validation
 
-Card-based actions
-Responsive layout
-Instant success/error feedback
-Clear separation of management, sales, and search
-Lightweight (no frontend frameworks)
-
-🛠️ Tech Stack
+###🛠️ Tech Stack
 Backend
 TypeScript
 Node.js
 Express.js
-Jest (Testing)
-
+Jest
 CORS
 Frontend
 HTML5
-CSS3 (Flexbox, Grid, Gradients)
+CSS3 (Flexbox & Grid)
 Vanilla JavaScript
 
-🧠 Core Logic
+###🎯 Business Logic
+The SweetShop class handles:
+Input validation
+Inventory tracking
+Error handling
+Case-insensitive search
+Unique ID generation
 
-All business rules are handled by the SweetShop class:
+###👨‍💻 Developer
+Mayank Goyal
 
-Input validation for every operation
 
-Case-insensitive searching
-
-Automatic quantity management
-
-Centralized error handling
-
-Unique sweet ID generation
-
-🤝 Contribution Guidelines
-
-Fork the repository
-
-Create a feature branch
-
-Make changes with tests
-
-Maintain full test coverage
-
-Submit a pull request
-
-📄 License
-This project is licensed under the ISC License.
-
-👩‍💻 Developer
-Mayank Goyal ](https://github.com/Mgoyal2711/sweet-management-system.git)](https://github.com/Mgoyal2711/sweet-management-system.git)](https://github.com/Mgoyal2711/sweet-management-system.git)
