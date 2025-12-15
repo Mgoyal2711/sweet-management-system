@@ -1,8 +1,12 @@
 # 🍬 Sweet Shop Management System
 
-A comprehensive Sweet Shop Management System built using **TypeScript** for the backend and **vanilla JavaScript** for the frontend. This application allows complete management of sweet inventory with CRUD operations, search functionality, and full test coverage.
+A **comprehensive Sweet Shop Management System** built using **TypeScript** for the backend and **vanilla JavaScript** for the frontend.  
+This application enables complete inventory management with **CRUD operations**, **advanced search functionality**, and **100% test coverage**.
+
+---
 
 ## ✨ Features
+
 - **Add Sweet** – Add new sweets with name, category, price, and quantity  
 - **Delete Sweet** – Remove sweets from inventory  
 - **Search by Name** – Find sweets using exact name  
@@ -10,11 +14,16 @@ A comprehensive Sweet Shop Management System built using **TypeScript** for the 
 - **Search by Price Range** – Filter sweets within a price range  
 - **Purchase Sweet** – Buy sweets with automatic stock reduction  
 - **Restock Sweet** – Increase stock quantity  
-- **View All Sweets** – Display complete inventory
-  
+- **View All Sweets** – Display complete inventory  
+
+---
+
 ## 🏗️ Project Structure
+
 Sweet-Shop-Management-System
+│
 ├── README.md
+│
 ├── Backend/
 │ ├── src/
 │ │ ├── app.ts # SweetShop business logic
@@ -26,101 +35,142 @@ Sweet-Shop-Management-System
 │ │ ├── utils/
 │ │ │ └── IdGenerator.ts # Unique ID generator
 │ │ └── tests/ # Unit test suite
+│ │
 │ ├── package.json
 │ ├── tsconfig.json
 │ ├── jest.config.js
 │ └── coverage/ # Test coverage reports
+│
 └── Frontend/
 ├── index.html # UI
 ├── script.js # Frontend logic
 └── style.css # Styling
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm
+yaml
+Copy code
 
-### 🔧 Backend Setup
+---
+
+## 📋 Prerequisites
+
+- **Node.js** (v14 or higher)
+- **npm**
+
+---
+
+## 🔧 Backend Setup
+
+```bash
 git clone https://github.com/Mgoyal2711/Sweet-management-system
 cd Sweet-management-system/Backend
 npm install
 npm run dev
-📍 Server runs at: http://localhost:3000
+📍 Server runs at:
+http://localhost:3000
 
-###🎨 Frontend Setup
+🎨 Frontend Setup
+bash
+Copy code
 cd Frontend
-Open index.html in a browser
-OR use Live Server in VS Code
-Ensure backend is running on port 3000
+Open index.html directly in a browser OR
 
-###🧪 Testing
+Use Live Server in VS Code
+
+Ensure the backend is running on port 3000
+
+🧪 Testing
 Run Tests
+bash
+Copy code
 cd Backend
 npm test
 Run Coverage
+bash
+Copy code
 npm run test:coverage
 Watch Mode
+bash
+Copy code
 npm run test:watch
-
-###📊 Test Coverage Report
+📊 Test Coverage Report
 ✔ 100% Code Coverage Achieved
+
 Metric	Coverage
 Statements	100%
 Branches	100%
 Functions	100%
 Lines	100%
 
-###Test files include:
+Test Files Include
 Add Sweet tests
+
 Delete Sweet tests
-Search (Name, Category, Price)
-Purchase tests
-Restock tests
+
+Search tests (Name, Category, Price Range)
+
+Purchase Sweet tests
+
+Restock Sweet tests
+
 ID Generator tests
-View report:
+
+📂 Coverage Report Location:
 Backend/coverage/index.html
 
-###🌐 API Endpoints
+🌐 API Endpoints
 Method	Endpoint	Description
 POST	/api/sweets/add	Add a sweet
-DELETE	/api/sweets/delete	Delete sweet
+DELETE	/api/sweets/delete	Delete a sweet
 GET	/api/sweets/all	View all sweets
 POST	/api/sweets/search	Search by name
 POST	/api/sweets/category	Search by category
-POST	/api/sweets/price	Search by price
+POST	/api/sweets/price	Search by price range
 POST	/api/sweets/purchase	Purchase sweet
 POST	/api/sweets/restock	Restock sweet
 
-###💻 Frontend Preview
-Main Interface
-Sweet Added
-UI Highlights
+💻 Frontend Highlights
 Responsive design
-Real-time feedback
+
 Card-based dashboard
-Clean & intuitive UX
+
+Real-time user feedback
+
 Client-side validation
 
-###🛠️ Tech Stack
+Clean and intuitive UI
+
+🛠️ Tech Stack
 Backend
 TypeScript
+
 Node.js
+
 Express.js
+
 Jest
+
 CORS
+
 Frontend
 HTML5
+
 CSS3 (Flexbox & Grid)
+
 Vanilla JavaScript
 
-###🎯 Business Logic
-The SweetShop class handles:
+🎯 Business Logic
+The SweetShop class is responsible for:
+
 Input validation
-Inventory tracking
+
+Inventory management
+
 Error handling
-Case-insensitive search
+
+Case-insensitive searching
+
 Unique ID generation
 
-###👨‍💻 Developer
+👨‍💻 Developer
 Mayank Goyal
-
 
