@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Store Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <h1>Sweet Store Management</h1>
+        <p>Inventory • Sales • Search</p>
+    </div>
+
+    <div class="container">
+
+        <!-- MANAGEMENT BLOCK -->
+        <div class="block">
+            <h2 class="block-title">Inventory Controls</h2>
+
+            <div class="row">
+                <div class="card wide">
+                    <h3>Add New Sweet</h3>
+                    <form id="addForm">
+                        <div class="form-group">
+                            Sweet Name
+                            <input type="text" id="addName" placeholder="Rasgulla" required>
+                        </div>
+
+                        <div class="form-group">
+                            Category
+                            <input type="text" id="addCategory" placeholder="Bengali" required>
+                        </div>
+
+                        <div class="two-column">
+                            <div class="form-group">
+                                Price (₹)
+                                <input type="number" id="addPrice" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                Quantity
+                                <input type="number" id="addQuantity" min="0" required>
+                            </div>
+                        </div>
+
+                        <button type="submit">Add Sweet</button>
+                    </form>
+                    <div id="addMessage"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <h3>Restock</h3>
+                    <form id="restockForm">
+                        <div class="form-group">
+                            Sweet Name
+                            <input type="text" id="restockName" required>
+                        </div>
+                        <div class="form-group">
+                            Quantity
+                            <input type="number" id="restockQuantity" min="1" required>
+                        </div>
+                        <button type="submit">Update</button>
+                    </form>
+                    <div id="restockMessage"></div>
+                </div>
+
+                <div class="card">
+                    <h3>Delete Item</h3>
+                    <form id="deleteForm">
+                        <div class="form-group">
+                            Sweet Name
+                            <input type="text" id="deleteName" required>
+                        </div>
+                        <button type="submit">Remove</button>
+                    </form>
+                    <div id="deleteMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALES BLOCK -->
+        <div class="block">
+            <h2 class="block-title">Sales</h2>
+
+            <div class="row">
+                <div class="card">
+                    <h3>Purchase Sweet</h3>
+                    <form id="purchaseForm">
+                        <div class="form-group">
+                            Sweet Name
+                            <input type="text" id="purchaseName" required>
+                        </div>
+                        <div class="form-group">
+                            Quantity
+                            <input type="number" id="purchaseQuantity" min="1" required>
+                        </div>
+                        <button type="submit">Purchase</button>
+                    </form>
+                    <div id="purchaseMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH BLOCK -->
+        <div class="block">
+            <h2 class="block-title">Search & Filters</h2>
+
+            <div class="row">
+                <div class="card">
+                    <h3>By Name</h3>
+                    <form id="searchForm">
+                        <div class="form-group">
+                            Sweet Name
+                            <input type="text" id="searchName" required>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                    <div id="searchMessage"></div>
+                </div>
+
+                <div class="card">
+                    <h3>By Category</h3>
+                    <form id="categoryForm">
+                        <div class="form-group">
+                            Category
+                            <input type="text" id="searchCategory" required>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                    <div id="categoryMessage"></div>
+                </div>
+
+                <div class="card">
+                    <h3>By Price</h3>
+                    <form id="priceForm">
+                        <div class="two-column">
+                            <div class="form-group">
+                                Min
+                                <input type="number" id="minPrice" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                Max
+                                <input type="number" id="maxPrice" step="0.01" min="0" required>
+                            </div>
+                        </div>
+                        <button type="submit">Apply</button>
+                    </form>
+                    <div id="priceMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INVENTORY VIEW -->
+        <div class="block">
+            <h2 class="block-title">Inventory Overview</h2>
+
+            <div class="row">
+                <div class="card wide">
+                    <h3>All Available Sweets</h3>
+                    <button onclick="viewAllSweets()">Load Inventory</button>
+                    <div id="allSweetsMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="sweets-display" id="sweetsDisplay" style="display:none;">
+            <h3>Results</h3>
+            <div id="sweetsContainer"></div>
+        </div>
+
+        <footer>
+            <p>Sweet Store Management | Incubyte Assignment</p>
+        </footer>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
