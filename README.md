@@ -52,7 +52,6 @@ Sweet-Shop-Management-System
 - Node.js (v14 or higher)
 - npm
 
----
 
 ## 🔧 Backend Setup
 
@@ -66,7 +65,6 @@ npm run dev
 
 Server runs at: http://localhost:3000
 
----
 
 ## 🎨 Frontend Setup
 
